@@ -5,7 +5,7 @@ from api import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^emotion/', views.Emotion.as_view()),
+    url(r'^image/', views.Image.as_view()),
 ]
 
 # urlpatterns = format_suffix_patterns(urlpatterns)
