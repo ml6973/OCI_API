@@ -72,16 +72,17 @@ Header Format:
 }
 ```
 
-Example GET:
+Example POST:
 
 ```
-curl -X GET http://127.0.0.1:8000/image/ -d "@/path/to/image" -H "api-uname: username" -H "api-pass: password"
+curl -D /path/for/json/results -v -X POST -F 'image=@/path/to/image' [IP]:[port]/image/ -H "api-uname: [api username]" -H "api-pass: [api password]" > /path/for/output
 ```
 
 EXAMPLE RESPONSE:
 
 ```
-[ImageData as a Byte String]
+HTTP Header['Results']:  JSON Results (if needed)
+HTTP Data:  [ImageData as a Byte String]
 ```
 
 Returns: HTTP Code 200
